@@ -98,7 +98,10 @@ const wantedInfoKey = [
   'offBoardTime',
   'duringPeriod',
   'hardBedCount',
-  'hardSetCount'
+  'hardSetCount',
+  'commercialCount',
+  'firstClassCount',
+  'secondClassCount'
 ];
 
 const header = {
