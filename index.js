@@ -72,7 +72,7 @@ const reverseMap = constructor(map);
 
 const ticketInfoMap = {
   trainNo: { index: 3, title: '车次' },
-  flag: { index: 1, title: '售卖信息' },
+  flag: { index: 1, title: '售卖信息', render: (value) => value.replace('<br/>', '') },
   msg: { index: 0, title: '信息' },
   start: { index: 4, title: '始发站', render: (value) => reverseMap[value] },
   end: { index: 5, title: '终到站', render: (value) => reverseMap[value] },
@@ -97,11 +97,9 @@ const wantedInfoKey = [
   'onBoardTime',
   'offBoardTime',
   'duringPeriod',
+  'topBedCount',
   'hardBedCount',
-  'hardSetCount',
-  'commercialCount',
-  'firstClassCount',
-  'secondClassCount'
+  'hardSetCount'
 ];
 
 const header = {
