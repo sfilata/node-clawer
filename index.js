@@ -58,7 +58,27 @@ const map = {
   广元: 'GYW',
   天水: 'TSJ',
   杭州: 'HZH',
-  汉中: 'HOY'
+  汉中: 'HOY',
+  西安: 'XAY',
+  三门峡: 'SMF',
+  渑池: 'MCF',
+  义马: 'YMF',
+  洛阳: 'LYF',
+  郑州: 'ZZF',
+  民权: 'MQF',
+  徐州: 'XCH',
+  新沂: 'VIH',
+  沭阳: 'FMH',
+  淮安: 'AUH',
+  盐城: 'AFH',
+  泰州: 'UTH',
+  扬州: 'YLH',
+  宝鸡: 'BJY',
+  虢镇: 'GZY',
+  略阳: 'LYY',
+  两当: 'LDY',
+  凤县: 'FXY',
+  江油: 'JFW'
 };
 
 const constructor = (dataMap) => {
