@@ -1,14 +1,14 @@
 {
   "name": "node-clawer",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/bundle.mjs.js",
   "license": "MIT",
+  "type": "module",
   "bin": {
-    "ticket-finder": "./index.js"
+    "ticket-finder": "dist/bundle.mjs.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",
-    "cheerio": "^1.0.0-rc.10",
     "cli-table2": "^0.2.0",
     "commander": "^8.1.0",
     "figlet": "^1.5.2",
@@ -17,9 +17,17 @@
   },
   "scripts": {
     "start": "node index.js",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "build": "rollup -c"
   },
   "devDependencies": {
-    "git-cz": "^4.9.0"
+    "@babel/core": "^7.20.7",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.2.1",
+    "git-cz": "^4.9.0",
+    "rollup": "^3.9.1"
   }
 }

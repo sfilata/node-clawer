@@ -1,6 +1,4 @@
-#!/usr/bin/env node
 const superagent = require('superagent');
-const cheerio = require('cheerio');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const figlet = require('figlet');

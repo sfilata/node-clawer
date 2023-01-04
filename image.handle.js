@@ -1,5 +1,4 @@
 const superagent = require('superagent');
-const cheerio = require('cheerio');
 const path = require('path');
 const fs = require('fs');
 
