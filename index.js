@@ -6,23 +6,6 @@ const inquirer = require('inquirer');
 const figlet = require('figlet');
 const Table = require('cli-table2');
 
-// const commander = require('commander');
-// const program = new commander.Command();
-// program.version('0.0.1').parse(process.argv);
-
-// program
-//   .option('-d, --debug', 'output extra debugging')
-//   .option('-s, --small', 'small pizza size')
-//   .option('-p, --pizza-type <type>', 'flavour of pizza');
-
-// program.parse(process.argv);
-
-// const options = program.opts();
-// if (options.debug) console.log(options);
-// console.log('pizza details:');
-// if (options.small) console.log('- small pizza size');
-// if (options.pizzaTy console.log(`- ${options.pizzaType}`);
-
 const init = () => {
   console.log(
     chalk.green(
@@ -163,7 +146,11 @@ const run = ({ trainDate, startStation, endStation }) => {
       if (err) {
         console.log('Error occurred.');
       }
-      const { data } = JSON.parse(res.text);
-      formatTicketInfo(data.result);
+      try {
+        const { data } = JSON.parse(res.text);
+        formatTicketInfo(data.result);
+      } catch (e) {
+        console.log('网络出了些问题，请联系作者或者稍候再试.');
+      }
     });
 };

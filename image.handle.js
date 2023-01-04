@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const path = require('path');
 const fs = require('fs');
 
-const word = '胡歌';
+const word = '星际争霸';
 
 const getValueFromUrl = function (title, htmlText) {
   const reg = new RegExp(`"${title}":"(.*?)"`, 'g');
