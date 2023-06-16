@@ -1,6 +1,8 @@
 name: hello-world-example
 on:
   push:
+env:
+  LOCAL: 'MacOS'
 jobs:
   use-actions:
     runs-on: ubuntu-latest
@@ -35,3 +37,12 @@ jobs:
       -
         name: Say Goodbye
         run: echo "Goodbye!"
+      -
+        name: Useful default vars
+        run: |
+          echo "Workflow name:  $GITHUB_WORKFLOW"
+          echo "Workspace:      $GITHUB_WORKSPACE"
+          echo "Event:          $GITHUB_EVENT_NAME"
+          echo "SHA:            $GITHUB_SHA"
+          echo "Ref:            $GITHUB_REF"
+          echo "Local:          $LOCAL"
