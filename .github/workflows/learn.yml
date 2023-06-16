@@ -2,6 +2,23 @@ name: hello-world-example
 on:
   push:
 jobs:
+  use-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        
+        with:
+          node-version: '16.2.0'
+
+      -
+        name: Install repo dependencies
+        run: yarn
+
+      -
+        name: Run script from repo
+        run: yarn action
   say-hello:
     runs-on: ubuntu-latest
     steps:

@@ -18,7 +18,8 @@
   "scripts": {
     "start": "node index.js",
     "commit": "git add . && git-cz",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "action": "echo runing action"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
