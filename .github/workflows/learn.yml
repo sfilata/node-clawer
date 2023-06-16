@@ -14,6 +14,7 @@ jobs:
           echo "Step 1..."
           echo "Step 2..."
           echo "Step 3..."
+          echo "Triggered by: $GITHUB_EVENT_NAME"
       -
         name: Say Goodbye
         run: echo "Goodbye!"
